@@ -8,4 +8,10 @@ edition = "2021"
 [dependencies]
 actix-web = "4"
 serde = {version = "1", features = ["derive"]}
-reqwest = "0.11"
+reqwest = { version = "0.11.18", features = ["blocking"] }
+select = "0.5"
+rand = "0.7.2"
+supabase-rust = "0.1.2"
+openssl = { version = "0.10", features = ["vendored"] }
+openssl-sys = "0.9"
+scraper = "0.18.1"

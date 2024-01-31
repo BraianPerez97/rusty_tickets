@@ -1,0 +1,12 @@
+/home/braimorfi/Coding/rusty_tickets/rusty_tickets/target/debug/deps/libmac-254894c2b5192854.rmeta: /home/braimorfi/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mac-0.1.1/src/lib.rs /home/braimorfi/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mac-0.1.1/src/test.rs /home/braimorfi/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mac-0.1.1/src/mem.rs /home/braimorfi/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mac-0.1.1/src/format.rs /home/braimorfi/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mac-0.1.1/src/syntax_ext.rs /home/braimorfi/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mac-0.1.1/src/matches.rs /home/braimorfi/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mac-0.1.1/src/inspect.rs /home/braimorfi/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mac-0.1.1/src/cfg.rs
+
+/home/braimorfi/Coding/rusty_tickets/rusty_tickets/target/debug/deps/mac-254894c2b5192854.d: /home/braimorfi/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mac-0.1.1/src/lib.rs /home/braimorfi/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mac-0.1.1/src/test.rs /home/braimorfi/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mac-0.1.1/src/mem.rs /home/braimorfi/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mac-0.1.1/src/format.rs /home/braimorfi/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mac-0.1.1/src/syntax_ext.rs /home/braimorfi/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mac-0.1.1/src/matches.rs /home/braimorfi/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mac-0.1.1/src/inspect.rs /home/braimorfi/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mac-0.1.1/src/cfg.rs
+
+/home/braimorfi/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mac-0.1.1/src/lib.rs:
+/home/braimorfi/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mac-0.1.1/src/test.rs:
+/home/braimorfi/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mac-0.1.1/src/mem.rs:
+/home/braimorfi/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mac-0.1.1/src/format.rs:
+/home/braimorfi/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mac-0.1.1/src/syntax_ext.rs:
+/home/braimorfi/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mac-0.1.1/src/matches.rs:
+/home/braimorfi/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mac-0.1.1/src/inspect.rs:
+/home/braimorfi/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mac-0.1.1/src/cfg.rs:
