@@ -14,11 +14,11 @@ struct Ticket {
     updated_at: String, // Replace with Schema
 }
 
-fn main() {
+/*fn main() {
     let supabase_url = "https://rftiqjpzbdnbbyywmbuz.supabase.co";
     let supabase_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJmdGlxanB6YmRuYmJ5eXdtYnV6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDY1NTU1MDksImV4cCI6MjAyMjEzMTUwOX0.0wuS8vmGyw-n4Gs-hYm5gFy-ruWvF0FWJv534ISw3cM";
     let client = SupabaseClient::new(supabase_url, supabase_key);
-}
+}*/
 
 async fn fetch_html(url: &str) -> Result<String, reqwest::Error> {
     let body = reqwest::get(url).await?.text().await?;
@@ -32,9 +32,29 @@ fn parse_html(html: &str) {
         // Exact information from the nodes 
         let text = node.text();
         println!("{}", text);
+
+        // Extract the href attribute from the node
+        let ticket = Ticket {
+            id: 0,
+            title: text.clone(),
+            description: "Description Here".to_string(), 
+            created_at: "2021-11-25T00:00:00.000Z".to_string(),
+            updated_at: "2021-11-25T00:00:00.000Z".to_string(),
+        };
+
+        update_supabase(ticket);
     }
 }
 
+fn update_supabase(ticket: Ticket) {
+    // Update the Supabase client 
+    let supabase_url = "https://rftiqjpzbdnbbyywmbuz.supabase.co";
+    let supabase_key = 
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJmdGlxanB6YmRuYmJ5eXdtYnV6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDY1NTU1MDksImV4cCI6MjAyMjEzMTUwOX0.0wuS8vmGyw-n4Gs-hYm5gFy-ruWvF0FWJv534ISw3cM";
+    let client = SupabaseClient::new(supabase_url, supabase_key);
+
+
+}
 #[tokio::main]
 async fn main() {
     // List of URLS for scrape
@@ -52,7 +72,7 @@ async fn main() {
     for url in urls {
         match fetch_html(url).await {
             Ok(html) => parse_html(&html),
-            Err(e) => println!("Error fetching {}: {}", url, err),
+            Err(e) => println!("Error fetching {}: {}", url, e),
         }
     }
 }
@@ -61,15 +81,6 @@ let response = reqwest::blocking::get("https://ticketera.com/");
 let response = request::blocking::get("https://boletos.prticket.com/events/en/listaEventos");
 let html_content = response.unwrap().text().unwrap();
 }*/
-struct SupabaseConfig {
-    api_url: &'static str,
-    api_key: &'static str,
-}
-
-const SUPABASE_CONFIG: SupabaseConfig = SupabaseConfig {
-    api_url: "https://rftiqjpzbdnbbyywmbuz.supabase.co",
-    api_key: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJmdGlxanB6YmRuYmJ5eXdtYnV6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDY1NTU1MDksImV4cCI6MjAyMjEzMTUwOX0.0wuS8vmGyw-n4Gs-hYm5gFy-ruWvF0FWJv534ISw3cM",
-};
 
 #[derove(Debug, Serialize, Deserialize)]
 struct Ticket {
@@ -78,4 +89,34 @@ struct Ticket {
     description: String,
     created_at: String, // Need to repalce with Supabase Schema
     updated_at: String, // Need to repalce with Supabase Schema
+}
+
+#[derive(Debug, serde::Serialize, Deserialize, serde::Deserialize)]
+struct User {
+    id: i32,
+    username: String,
+    password: String,
+    socical_media_links: serde_json::Value,
+}
+
+#[derive(Debug, serde::Serialize, serde::Deserialize)]
+struct Evvent {
+    event_id: i32,
+    event_name: String,
+    event_date: String,
+}
+
+#[derive(Debug, serde::Serialize, serde::Deserialize)]
+struct UserTicket {
+    user_id: i32,
+    event_id: i32,
+}
+
+#[derive(Debug, serde::Serialize, serde::Deserialize)]
+struct EventMemory {
+    user_id: i32,
+    event_id: i32,
+    photo_links: serde_json::Value,
+    video_links: serde_json::Value,
+    audio_links: serde_json::Value,
 }
